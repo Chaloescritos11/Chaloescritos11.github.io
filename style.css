@@ -1,19 +1,125 @@
-body {
-	background-color: #000;
-	margin: 0;
-   
-	background-repeat: no-repeat;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222f3e;
+    
+}
+
+.conten1{
+    display: flex;
+    position: relative;
+    right: 30%;
+    top: -200px;
+}
+.conten2{
+    display: flex;
+    position: relative;
+    right: 35%;
+    top: 200px;
+}
+.conten3{
+    display: flex;
+    position: relative;
+    right: -35%;
+    top: -200px;
+}
+
+.conten4{
+    display: flex;
+    position: relative;
+    right: -30%;
+    top: 200px;
+}
+
+.carta {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    background-color: aliceblue;
+    height: 80%;
+    width: 60%;
+    font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #F8D7DA;
+    
+}
+
+
+
+.heart{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #ff4757;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #ff4757;
+    animation: animate .6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: -10px -10px 90px #ff4757;
+}
+
+.heart::after {
+    content: '';
+    position: absolute;
+    right: -50%;
+    width: 70px;
+    height: 70px;
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: 10px 10px 90px #ff4757;
+}
+
+html{
+    @media screen and (max-width:540px){
+        .carta{
+            height: 80%;
+    width: 90%;
+            font-size: 20px;
+        }
+    }
 }
 
 .btn{
-    position: absolute;
-    bottom: 48%;
-    left: 42%;
-  
+    position: fixed;
     background-color: pink;
+    top: 20%;
     padding: 2%;
     border-radius: 50%;
     text-decoration: none;
     text-decoration-color: #000;
 }
-
